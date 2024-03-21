@@ -1,0 +1,696 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "test/utils/LiquidityAmount.sol",
+    "id": 70625,
+    "exportedSymbols": {
+      "FixedPoint96": [
+        67000
+      ],
+      "FullMath": [
+        67173
+      ],
+      "LiquidityAmounts": [
+        11813
+      ],
+      "getAmountsForLiquidity": [
+        70599
+      ],
+      "getLiquidityForAmounts": [
+        70624
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "40:735:148",
+    "nodes": [
+      {
+        "id": 70574,
+        "nodeType": "PragmaDirective",
+        "src": "40:23:148",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "=",
+          "0.7",
+          ".6"
+        ]
+      },
+      {
+        "id": 70575,
+        "nodeType": "ImportDirective",
+        "src": "67:63:148",
+        "nodes": [],
+        "absolutePath": "contracts/v3-periphery/libraries/LiquidityAmounts.sol",
+        "file": "contracts/v3-periphery/libraries/LiquidityAmounts.sol",
+        "scope": 70625,
+        "sourceUnit": 11814,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 70599,
+        "nodeType": "FunctionDefinition",
+        "src": "134:311:148",
+        "nodes": [],
+        "body": {
+          "id": 70598,
+          "nodeType": "Block",
+          "src": "312:133:148",
+          "nodes": [],
+          "statements": [
+            {
+              "expression": {
+                "arguments": [
+                  {
+                    "id": 70592,
+                    "name": "sqrtRatioX96",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 70577,
+                    "src": "371:12:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  {
+                    "id": 70593,
+                    "name": "sqrtRatioAX96",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 70579,
+                    "src": "389:13:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  {
+                    "id": 70594,
+                    "name": "sqrtRatioBX96",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 70581,
+                    "src": "408:13:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  {
+                    "id": 70595,
+                    "name": "liquidity",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 70583,
+                    "src": "427:9:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  }
+                ],
+                "expression": {
+                  "argumentTypes": [
+                    {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    },
+                    {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    },
+                    {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    },
+                    {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  ],
+                  "expression": {
+                    "id": 70590,
+                    "name": "LiquidityAmounts",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 11813,
+                    "src": "326:16:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_contract$_LiquidityAmounts_$11813_$",
+                      "typeString": "type(library LiquidityAmounts)"
+                    }
+                  },
+                  "id": 70591,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "memberName": "getAmountsForLiquidity",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 11812,
+                  "src": "326:39:148",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_function_internal_pure$_t_uint160_$_t_uint160_$_t_uint160_$_t_uint128_$returns$_t_uint256_$_t_uint256_$",
+                    "typeString": "function (uint160,uint160,uint160,uint128) pure returns (uint256,uint256)"
+                  }
+                },
+                "id": 70596,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "kind": "functionCall",
+                "lValueRequested": false,
+                "names": [],
+                "nodeType": "FunctionCall",
+                "src": "326:115:148",
+                "tryCall": false,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_tuple$_t_uint256_$_t_uint256_$",
+                  "typeString": "tuple(uint256,uint256)"
+                }
+              },
+              "functionReturnParameters": 70589,
+              "id": 70597,
+              "nodeType": "Return",
+              "src": "316:125:148"
+            }
+          ]
+        },
+        "implemented": true,
+        "kind": "freeFunction",
+        "modifiers": [],
+        "name": "getAmountsForLiquidity",
+        "parameters": {
+          "id": 70584,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 70577,
+              "mutability": "mutable",
+              "name": "sqrtRatioX96",
+              "nodeType": "VariableDeclaration",
+              "scope": 70599,
+              "src": "169:20:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint160",
+                "typeString": "uint160"
+              },
+              "typeName": {
+                "id": 70576,
+                "name": "uint160",
+                "nodeType": "ElementaryTypeName",
+                "src": "169:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint160",
+                  "typeString": "uint160"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 70579,
+              "mutability": "mutable",
+              "name": "sqrtRatioAX96",
+              "nodeType": "VariableDeclaration",
+              "scope": 70599,
+              "src": "193:21:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint160",
+                "typeString": "uint160"
+              },
+              "typeName": {
+                "id": 70578,
+                "name": "uint160",
+                "nodeType": "ElementaryTypeName",
+                "src": "193:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint160",
+                  "typeString": "uint160"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 70581,
+              "mutability": "mutable",
+              "name": "sqrtRatioBX96",
+              "nodeType": "VariableDeclaration",
+              "scope": 70599,
+              "src": "218:21:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint160",
+                "typeString": "uint160"
+              },
+              "typeName": {
+                "id": 70580,
+                "name": "uint160",
+                "nodeType": "ElementaryTypeName",
+                "src": "218:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint160",
+                  "typeString": "uint160"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 70583,
+              "mutability": "mutable",
+              "name": "liquidity",
+              "nodeType": "VariableDeclaration",
+              "scope": 70599,
+              "src": "243:17:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint128",
+                "typeString": "uint128"
+              },
+              "typeName": {
+                "id": 70582,
+                "name": "uint128",
+                "nodeType": "ElementaryTypeName",
+                "src": "243:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "165:98:148"
+        },
+        "returnParameters": {
+          "id": 70589,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 70586,
+              "mutability": "mutable",
+              "name": "amount0",
+              "nodeType": "VariableDeclaration",
+              "scope": 70599,
+              "src": "278:15:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              },
+              "typeName": {
+                "id": 70585,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "278:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 70588,
+              "mutability": "mutable",
+              "name": "amount1",
+              "nodeType": "VariableDeclaration",
+              "scope": 70599,
+              "src": "295:15:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              },
+              "typeName": {
+                "id": 70587,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "295:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "277:34:148"
+        },
+        "scope": 70625,
+        "stateMutability": "pure",
+        "virtual": false,
+        "visibility": "internal"
+      },
+      {
+        "id": 70624,
+        "nodeType": "FunctionDefinition",
+        "src": "449:324:148",
+        "nodes": [],
+        "body": {
+          "id": 70623,
+          "nodeType": "Block",
+          "src": "629:144:148",
+          "nodes": [],
+          "statements": [
+            {
+              "expression": {
+                "arguments": [
+                  {
+                    "id": 70616,
+                    "name": "sqrtRatioX96",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 70601,
+                    "src": "688:12:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  {
+                    "id": 70617,
+                    "name": "sqrtRatioAX96",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 70603,
+                    "src": "706:13:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  {
+                    "id": 70618,
+                    "name": "sqrtRatioBX96",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 70605,
+                    "src": "725:13:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    }
+                  },
+                  {
+                    "id": 70619,
+                    "name": "amount0",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 70607,
+                    "src": "744:7:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  {
+                    "id": 70620,
+                    "name": "amount1",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 70609,
+                    "src": "757:7:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  }
+                ],
+                "expression": {
+                  "argumentTypes": [
+                    {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    },
+                    {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    },
+                    {
+                      "typeIdentifier": "t_uint160",
+                      "typeString": "uint160"
+                    },
+                    {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  ],
+                  "expression": {
+                    "id": 70614,
+                    "name": "LiquidityAmounts",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 11813,
+                    "src": "643:16:148",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_type$_t_contract$_LiquidityAmounts_$11813_$",
+                      "typeString": "type(library LiquidityAmounts)"
+                    }
+                  },
+                  "id": 70615,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": false,
+                  "lValueRequested": false,
+                  "memberName": "getLiquidityForAmounts",
+                  "nodeType": "MemberAccess",
+                  "referencedDeclaration": 11663,
+                  "src": "643:39:148",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_function_internal_pure$_t_uint160_$_t_uint160_$_t_uint160_$_t_uint256_$_t_uint256_$returns$_t_uint128_$",
+                    "typeString": "function (uint160,uint160,uint160,uint256,uint256) pure returns (uint128)"
+                  }
+                },
+                "id": 70621,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "kind": "functionCall",
+                "lValueRequested": false,
+                "names": [],
+                "nodeType": "FunctionCall",
+                "src": "643:126:148",
+                "tryCall": false,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                }
+              },
+              "functionReturnParameters": 70613,
+              "id": 70622,
+              "nodeType": "Return",
+              "src": "633:136:148"
+            }
+          ]
+        },
+        "implemented": true,
+        "kind": "freeFunction",
+        "modifiers": [],
+        "name": "getLiquidityForAmounts",
+        "parameters": {
+          "id": 70610,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 70601,
+              "mutability": "mutable",
+              "name": "sqrtRatioX96",
+              "nodeType": "VariableDeclaration",
+              "scope": 70624,
+              "src": "484:20:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint160",
+                "typeString": "uint160"
+              },
+              "typeName": {
+                "id": 70600,
+                "name": "uint160",
+                "nodeType": "ElementaryTypeName",
+                "src": "484:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint160",
+                  "typeString": "uint160"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 70603,
+              "mutability": "mutable",
+              "name": "sqrtRatioAX96",
+              "nodeType": "VariableDeclaration",
+              "scope": 70624,
+              "src": "508:21:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint160",
+                "typeString": "uint160"
+              },
+              "typeName": {
+                "id": 70602,
+                "name": "uint160",
+                "nodeType": "ElementaryTypeName",
+                "src": "508:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint160",
+                  "typeString": "uint160"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 70605,
+              "mutability": "mutable",
+              "name": "sqrtRatioBX96",
+              "nodeType": "VariableDeclaration",
+              "scope": 70624,
+              "src": "533:21:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint160",
+                "typeString": "uint160"
+              },
+              "typeName": {
+                "id": 70604,
+                "name": "uint160",
+                "nodeType": "ElementaryTypeName",
+                "src": "533:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint160",
+                  "typeString": "uint160"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 70607,
+              "mutability": "mutable",
+              "name": "amount0",
+              "nodeType": "VariableDeclaration",
+              "scope": 70624,
+              "src": "558:15:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              },
+              "typeName": {
+                "id": 70606,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "558:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 70609,
+              "mutability": "mutable",
+              "name": "amount1",
+              "nodeType": "VariableDeclaration",
+              "scope": 70624,
+              "src": "577:15:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              },
+              "typeName": {
+                "id": 70608,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "577:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "480:115:148"
+        },
+        "returnParameters": {
+          "id": 70613,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 70612,
+              "mutability": "mutable",
+              "name": "liquidity",
+              "nodeType": "VariableDeclaration",
+              "scope": 70624,
+              "src": "610:17:148",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint128",
+                "typeString": "uint128"
+              },
+              "typeName": {
+                "id": 70611,
+                "name": "uint128",
+                "nodeType": "ElementaryTypeName",
+                "src": "610:7:148",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint128",
+                  "typeString": "uint128"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "609:19:148"
+        },
+        "scope": 70625,
+        "stateMutability": "pure",
+        "virtual": false,
+        "visibility": "internal"
+      }
+    ],
+    "license": "UNLICENSED"
+  },
+  "id": 148
+}
